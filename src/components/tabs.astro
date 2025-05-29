@@ -5,18 +5,18 @@ import About from "@components/about.astro";
 
 <div class="tabs container">
   <div class="tabs__container">
-    <button class="tab " data-target="portfolio-content"
+    <button class="tab tab-active" data-target="portfolio-content"
       >Portafolio</button
     >
-    <button class="tab tab-active" data-target="about-content">Sobre mí</button>
+    <button class="tab " data-target="about-content">Sobre mí</button>
   </div>
 </div>
 <div class="content">
   <div class="content">
-    <div id="about-content" class="tab-content content-active">
+    <div id="about-content" class="tab-content ">
       <About />
     </div>
-    <div id="portfolio-content" class="tab-content ">
+    <div id="portfolio-content" class="tab-content content-active ">
       <Portfolio />
     </div>
   </div>

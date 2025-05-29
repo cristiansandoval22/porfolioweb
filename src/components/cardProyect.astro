@@ -48,6 +48,10 @@ const { title, subtitle, description, img, github, preview } = Astro.props;
   .card {
     background-color: var(--bg-primary);
     border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    
   }
   .card__figure {
     border-top-left-radius: 10px;
@@ -62,21 +66,22 @@ const { title, subtitle, description, img, github, preview } = Astro.props;
     padding: 1rem;
   }
   .card__title {
-    font-size: 1rem;
+    font-size: 1.5rem;
     font-weight: 700;
     color: var(--text-primary);
     margin-bottom: 0.5rem;
   }
   .card__subtitle {
-    font-size: 0.8rem;
+    font-size: 1rem;
     font-weight: 400;
     color: var(--text-secondary);
   }
   .card__description {
-    font-size: 0.8rem;
+    font-size: 1rem;
     font-weight: 400;
     color: var(--text-secondary);
     margin-bottom: 0.5rem;
+    text-wrap: wrap;
   }
   .card__actions {
     display: flex;
