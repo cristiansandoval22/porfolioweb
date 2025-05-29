@@ -1,0 +1,105 @@
+---
+import Portfolio from "@components/porfolio.astro";
+import About from "@components/about.astro";
+---
+
+<div class="tabs container">
+  <div class="tabs__container">
+    <button class="tab " data-target="portfolio-content"
+      >Portafolio</button
+    >
+    <button class="tab tab-active" data-target="about-content">Sobre mí</button>
+  </div>
+</div>
+<div class="content">
+  <div class="content">
+    <div id="about-content" class="tab-content content-active">
+      <About />
+    </div>
+    <div id="portfolio-content" class="tab-content ">
+      <Portfolio />
+    </div>
+  </div>
+</div>
+
+<style>
+  /* Contenedor de los botones de tabs */
+.tabs__container {
+  background-color: var(--bg-primary);
+  padding: 1rem;
+  border-radius: 4px;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  margin-inline: auto;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+/* Estilos base para cada tab */
+.tab {
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: none;
+  background-color: transparent;
+  color: var(--text-primary);
+}
+
+/* Tab activo (botón seleccionado) */
+.tab-active {
+  color: var(--tab-active-color);
+  background-color: var(--bg-body);
+}
+
+/* Contenido oculto por defecto */
+.tab-content {
+  display: none;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition:
+    opacity 0.4s ease,
+    visibility 0.4s ease;
+}
+
+/* Contenido visible (activo) */
+.tab-content.content-active {
+  display: block;
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+/* Responsive: botones más grandes en pantallas medianas */
+@media (min-width: 768px) {
+  .tab {
+    font-size: 1.5rem;
+  }
+}
+
+</style>
+
+<script>
+  const tabs = document.querySelectorAll(".tab") as NodeListOf<HTMLButtonElement>;
+const contents = document.querySelectorAll(".tab-content") as NodeListOf<HTMLElement>;
+
+tabs.forEach((tab) => {
+  tab.addEventListener("click", () => {
+    const target = tab.dataset.target as string; // por ejemplo: "about-content"
+
+    // Quitar estado activo de todos los botones y contenidos
+    tabs.forEach(t => t.classList.remove("tab-active"));
+    contents.forEach(c => c.classList.remove("content-active"));
+
+    // Activar el botón actual
+    tab.classList.add("tab-active");
+
+    // Activar el contenido correspondiente
+    document.getElementById(target)?.classList.add("content-active");
+  });
+});
+
+</script>

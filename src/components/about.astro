@@ -1,0 +1,217 @@
+---
+import WorkArticle from "./workArticle.astro";
+import EducationArticle from "./educationArticle.astro";
+import SkillArticle from "./skillArticle.astro";
+import BootstrapIcon from "../Icons/bootstrap.astro";
+import FilmoraIcon from "../Icons/filmora.astro";
+import CapcutIcon from "../Icons/capcut.astro";
+import CardsSlider from "./cardsSlider.astro";
+
+const educations = [
+  {
+    company: "Bytpher",
+    description: "Introducción a la programación con pseudocódigo",
+  },
+  {
+    company: "FreeCodeCamp",
+    description: "Desarrollo Web con HTML y CSS",
+  },
+  {
+    company: "EDteam",
+    description: "Curso de JavaScript",
+  },
+  {
+    company: "Código Facilito",
+    description: "Curso Profesional de Desarrollo Web",
+  },
+  {
+    company: "Código Facilito",
+    description: "Curso de Accesibilidad a la Web",
+  },
+  {
+    company: "Código Facilito",
+    description: "Curso de Diseño para Programadores",
+  },
+  {
+    company: "Roco PS",
+    description: "Curso de Photoshop",
+  },
+];
+---
+
+<div class="about container">
+  <p class="about__description">
+    Soy un desarrollador web front-end creo hermosas interfaces de usuario. Me
+    especializo en transformar ideas y diseños en experiencias digitales
+    intuitivas y atractivas, utilizando las últimas tecnologías web.
+  </p>
+
+  <div class="work__container">
+    <h2 class="title">
+      <span class="material-symbols--work-outline"></span>
+      Experiencia laboral
+    </h2>
+    <div class="work__grid">
+      <WorkArticle />
+    </div>
+  </div>
+
+  <div class="education__container">
+    <h2 class="title">
+      <span class="tdesign--education"></span>
+      Educación
+    </h2>
+    <div class="education__grid">
+      {
+        educations.map((education) => (
+          <EducationArticle
+            company={education.company}
+            description={education.description}
+          />
+        ))
+      }
+    </div>
+  </div>
+
+  <div class="tools__container">
+    <h2 class="title">
+      <span class="fluent--window-dev-tools-16-filled "></span>
+      Tecnologías
+    </h2>
+    <div class="tools__grid">
+      <SkillArticle>
+        <span class="vscode-icons--file-type-html icons__tools"></span>
+        <p class="tools__name">HTML</p>
+      </SkillArticle>
+
+      <SkillArticle>
+        <span class="material-icon-theme--css icons__tools"></span>
+        <p class="tools__name">CSS</p>
+      </SkillArticle>
+
+      <SkillArticle>
+        <span class="vscode-icons--file-type-js-official icons__tools"></span>
+        <p class="tools__name">JavaScript</p>
+      </SkillArticle>
+
+      <SkillArticle>
+        <BootstrapIcon class="icons__tools" />
+        <p class="tools__name">Bootstrap 5</p>
+      </SkillArticle>
+
+      <SkillArticle>
+        <span class="skill-icons--git icons__tools"></span>
+        <p class="tools__name">Git</p>
+      </SkillArticle>
+
+      <SkillArticle>
+        <span class="mdi--github icons__tools"></span>
+        <p class="tools__name">GitHub</p>
+      </SkillArticle>
+
+      <SkillArticle>
+        <span class="skill-icons--vscode-light icons__tools"></span>
+        <p class="tools__name">VS Code</p>
+      </SkillArticle>
+
+      <SkillArticle>
+        <span class="devicon--photoshop icons__tools"></span>
+        <p class="tools__name">Photoshop</p>
+      </SkillArticle>
+
+      <SkillArticle>
+        <span class="material-icon-theme--figma icons__tools"></span>
+        <p class="tools__name">Figma</p>
+      </SkillArticle>
+
+      <SkillArticle>
+        <span class="skill-icons--astro icons__tools"></span>
+        <p class="tools__name">Astro</p>
+      </SkillArticle>
+
+      <SkillArticle>
+        <FilmoraIcon class="icons__tools" />
+        <p class="tools__name">Filmora</p>
+      </SkillArticle>
+
+      <SkillArticle>
+        <CapcutIcon class="icons__tools" />
+        <p class="tools__name">Capcut</p>
+      </SkillArticle>
+    </div>
+  </div>
+
+  <!-- <div class="skills__container">
+    <h2 class="title">
+      <span class="basil--stack-outline "></span>
+      Habilidades
+    </h2>
+    <CardsSlider />
+  </div> -->
+
+
+</div>
+
+<style>
+  .about {
+    margin-top: 1.5rem;
+  }
+  .title {
+    margin-block: 1rem;
+    color: var(--text-primary);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+
+  }
+  .about__description {
+    margin-bottom: 1rem;
+    color: var(--text-secondary);
+    font-size: 1.2rem;
+  }
+
+  .work__container,
+  .education__container {
+    padding-top: 1rem;
+  }
+
+  .tools__grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    padding-inline: 1rem;
+  }
+  .icons__tools {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+  .tools__name {
+    margin-left: 0.5rem;
+    color: var(--text-primary);
+  }
+
+
+  @media (min-width: 600px) {
+    .title {
+      font-size: 1.5rem;
+    }
+    
+    .education__grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1rem;
+    }
+    .tools__grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1rem;
+    }
+  }
+  @media (min-width: 1024px) {
+    .tools__grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1rem;
+    }
+  }
+</style>

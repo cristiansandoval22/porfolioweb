@@ -1,0 +1,35 @@
+---
+import Badge from "./badge.astro";
+interface Props {
+    company: string;
+    description: string;
+}
+const { company, description } = Astro.props;
+---
+
+
+<article class="education__article">
+    <Badge>{company}</Badge>
+    <p class="education__description">{description}</p>
+</article>
+
+<style>
+    .education__article {
+        padding: 0rem;
+       margin-inline: 1rem;
+        margin-bottom: 1rem;
+        padding-bottom: 0.5rem;
+        border-bottom: 1px solid var(--border-color);
+    }
+    .education__description {
+        margin-top: 0.5rem;
+        color: var(--text-secondary);
+    }
+    @media (min-width: 600px) {
+        .education__article {
+            padding: 1rem;
+            border-bottom: none;
+            border-left: 1px solid var(--border-color);
+        }
+    }
+</style>

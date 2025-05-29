@@ -1,0 +1,21 @@
+
+<p class="badge">
+    <slot/>
+</p>
+
+<style>
+    .badge {
+        background-color: var(--color-primary);
+        color: var(--badge-color);
+        padding: 0.3rem 0.6rem;
+        border-radius: 4px;
+        font-weight: 500;
+        width: fit-content;
+        font-size: 0.8rem;
+    }
+    @media (min-width: 600px) {
+        .badge {
+            font-size: 1rem;
+        }
+    }
+</style>

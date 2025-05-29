@@ -1,0 +1,25 @@
+---
+
+---
+
+<div class="skill__article">
+  <slot />
+</div>
+<style>
+
+.skill__article {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    background-color: var(--bg-primary);
+    padding: 0.5rem 1rem;
+    border-radius: 1rem;
+    /* width: fit-content; */
+    cursor: pointer;
+    transition: all 0.3s ease;
+
+}
+.skill__article:hover {
+    background-color: var(--skill-color);
+}
+</style>

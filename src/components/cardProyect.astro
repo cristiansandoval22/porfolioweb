@@ -1,0 +1,128 @@
+---
+
+
+
+interface Props {
+  title: string;
+  subtitle: string;
+  description: string;
+  img: string;
+  github?: string;
+  preview: string;
+}
+
+const { title, subtitle, description, img, github, preview } = Astro.props;
+---
+
+<article class="card">
+  <figure class="card__figure">
+    <img src={img} alt={`proyecto de ${title}`} class="card__img"  loading="lazy" decoding="async" />
+  </figure>
+
+  <div class="card__content">
+    <div class="card__sub-content">
+      <h3 class="card__subtitle">{subtitle}</h3>
+      <h2 class="card__title">{title}</h2>
+      <p class="card__description">
+        {description}
+      </p>
+    </div>
+    <div class="card__actions">
+      {
+        github && (
+          <a href={github} target="_blank" class="card__link">
+            <span class="mdi--github card__icon" />
+            Code
+          </a>
+        )
+      }
+      <a href={preview} target="_blank" class="card__link">
+        <span class="flowbite--link-outline card__icon"></span>
+        Preview
+      </a>
+    </div>
+  </div>
+</article>
+
+<style>
+  .card {
+    background-color: var(--bg-primary);
+    border-radius: 10px;
+  }
+  .card__figure {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    overflow: hidden;
+  }
+  .card__img {
+    width: 100%;
+    height: auto;
+  }
+  .card__content {
+    padding: 1rem;
+  }
+  .card__title {
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 0.5rem;
+  }
+  .card__subtitle {
+    font-size: 0.8rem;
+    font-weight: 400;
+    color: var(--text-secondary);
+  }
+  .card__description {
+    font-size: 0.8rem;
+    font-weight: 400;
+    color: var(--text-secondary);
+    margin-bottom: 0.5rem;
+  }
+  .card__actions {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    margin-top: 1rem;
+  }
+  .card__link {
+    display: flex;
+    gap: 0.5rem;
+    justify-content: center;
+    align-items: center;
+    padding: 0.4rem 0.8rem;
+    background-color: var(--bg-body);
+    color: var(--text-primary);
+    border-radius: 4px;
+    font-size: 0.8rem;
+    transition: all 0.3s ease;
+    cursor: pointer;
+  }
+  .card__link:hover {
+    background-color: var(--color-primary);
+    color: var(--bg-body);
+  }
+  .card__icon {
+    width: 1rem;
+    height: 1rem;
+    color: var(--text-primary);
+  }
+  @media (min-width: 600px) {
+    .card__title {
+      font-size: 1.5rem;
+    }
+    .card__subtitle {
+      font-size: 1rem;
+    }
+    .card__description {
+      font-size: 1rem;
+    }
+    .card__link {
+      padding: 0.4rem 1rem;
+    }
+    .card__icon {
+      width: 1.2rem;
+      height: 1.2rem;
+      color: var(--text-primary);
+    }
+  }
+</style>

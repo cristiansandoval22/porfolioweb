@@ -1,0 +1,33 @@
+---
+interface Props {
+  href: string;
+}
+
+const { href } = Astro.props;
+---
+
+<a href={href} class="btn__primary btn__visible">
+  <slot />
+</a>
+
+<style>
+  .btn__primary {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.4rem 0.8rem;
+    background-color: var(--color-secondary);
+    color: var(--color-n700);
+    border-radius: 4px;
+    font-size: 0.8rem;
+    transition: all 0.3s ease;
+  }
+  .btn__primary:hover {
+    background-color: var(--color-primary);
+  }
+  @media (min-width: 768px) {
+    .btn__primary {
+      font-size: 1rem;
+    }
+  }
+</style>

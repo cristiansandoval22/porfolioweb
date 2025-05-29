@@ -1,0 +1,60 @@
+---
+import Badge from "./badge.astro";
+---
+
+<article class="work__article">
+  <h3 class="work__title">Desarrollo y Diseño Web</h3>
+
+  <div class="work__info">
+    <Badge>Ene-2024 / Actual</Badge>
+    <p class="work__date">Bytpher/Perú</p>
+  </div>
+
+  <p class="work__description">
+    Desarrolle y diseñe sitios web para clientes utilizando herramientas no code, 
+    lo que resultó en interfaces de usuario atractivas y una mayor satisfacción del cliente.
+  </p>
+</article>
+
+<style>
+  .work__article {
+    padding: 0rem;
+    margin-bottom: 1rem;
+    padding-left: 1rem;
+  }
+  .work__title {
+    margin-bottom: 1rem;
+    color: var(--text-primary);
+    font-size: 1.2rem;
+  }
+  .work__info {
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  
+  .work__date {
+    color: var(--text-secondary);
+  }
+  .work__description {
+    color: var(--text-secondary);
+    text-wrap: balance;
+    font-size: 0.8rem;
+  } 
+  @media (min-width: 600px) {
+    .work__article {
+      padding: 1rem;
+    }
+    
+    .work__company {
+      font-size: 0.8rem;
+    }
+    .work__title {
+      font-size: 1.2rem;
+    }
+    .work__description {
+      font-size: 1rem;
+    }
+  }
+</style>

@@ -1,0 +1,62 @@
+---
+import ThemeToggle from "@components/themeToggle.astro";
+---
+
+<header class="header" id="header">
+  <div class="header__container container">
+    <a href="#top" class="logo">Código creativo</a>
+
+    <div class="header__actions">
+      <!-- <a href="#contact" class="btn__header">Contacto</a> -->
+      <ThemeToggle />
+    </div>
+  </div>
+</header>
+
+
+<style>
+    .header {
+        padding: 1rem 0;
+        background-color: var(--bg-primary);
+        position: fixed;
+        width: 100%;
+        z-index: 100;
+    }
+    .header__container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .logo {
+        font-size: 1.3rem;
+        font-weight: 700;
+        color: var(--text-primary);
+    }
+    .header__actions {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+    }
+    .btn__header {
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0.4rem 0.8rem;
+        background-color: var(--color-secondary);
+        color: var(--color-n700);
+        border-radius: 4px;
+        font-size: 0.8rem;
+        font-weight: 500;
+        transition: all 0.3s ease;
+        display: none;
+    }
+    .btn__header:hover {
+        background-color: var(--color-primary);
+    }
+    @media (min-width: 768px) {
+        .btn__header {
+            font-size: 1rem;
+            display: block;
+        }
+    }
+</style>

@@ -1,0 +1,81 @@
+---
+import CardProyect from "@components/cardProyect.astro";
+
+const Proyects = [
+  {
+    title: "Luesem - workwear",
+    subtitle: "Website",
+    description: "Proyecto realizado con la herramienta no-code Go High Level para una empresa enfocada en la innovación continua. La página destaca soluciones tecnológicas integradas con seguridad y confort, optimizada para conversión y experiencia del usuario.",
+    img: "/assets/project-1.webp",
+    github: "",
+    preview: "https://luesem.bysness.pe/luesem-3305",
+  },
+  {
+    title: "Innova - company selva",
+    subtitle: "Website",
+    description: "Proyecto desarrollado con la herramienta no-code Go High Level para una empresa dedicada a ofrecer soluciones personalizadas en abastecimiento alimenticio. La página está optimizada para captar clientes potenciales y comunicar su propuesta de valor de forma clara y efectiva.",
+    img: "/assets/project-2.webp",
+    github: "",
+    preview: "https://companyselva.com/",
+  },
+  {
+    title: "IPRESSalud",
+    subtitle: "Landing Page",
+    description: "Landing Page para la empresa IPRESSalud, que se dedica a categorizar correctamente para operar sin problemas y ampliar tus servicios.",
+    img: "/assets/project-3.webp",
+    github: "",
+    preview: "https://app.bysness.pe/v2/preview/jnrfK2n4CS4uAmRZ4WH7",
+  },
+  {
+    title: "Tienda de Cactus",
+    subtitle: "Landing Page",
+    description: "Landing Page simulada para la venta de cactus, desarrollado con HTML, CSS y JavaScript. Cuenta con diseño responsive, catálogo visual e interacciones dinámicas para una experiencia fluida en distintos dispositivos.",
+    img: "/assets/project-5.webp",
+    github: "https://github.com/cristiansandoval22/CACTUS__WEBSITE",
+    preview: "https://cristiansandoval22.github.io/CACTUS__WEBSITE/",
+  },
+  {
+    title: "Travelty",
+    subtitle: "Landing Page",
+    description: "Landing Page simulada para la venta de viajes, desarrollado con HTML, CSS y JavaScript. Cuenta con diseño responsive, catálogo visual e interacciones dinámicas para una experiencia fluida en distintos dispositivos.",
+    img: "/assets/project-6.webp",
+    github: "https://github.com/cristiansandoval22/WEBSITE__TRAVELTY",
+    preview: "https://cristiansandoval22.github.io/WEBSITE__TRAVELTY/",
+  },
+  {
+    title: "Marketing Avanza",
+    subtitle: "Landing Page",
+    description: "Landing Page simulada para agencia de marketing, desarrollado con HTML, CSS y JavaScript. Cuenta con diseño responsive e interacciones dinámicas para una experiencia fluida en distintos dispositivos.",
+    img: "/assets/project-7.webp",
+    github: "https://github.com/cristiansandoval22/MarketingAvanza",
+    preview: "https://cristiansandoval22.github.io/MarketingAvanza/",
+  },
+];
+---
+<!-- class="tab-content active" -->
+<section id="portfolio-content">
+  <div class="grid__porfolio container">
+    {Proyects.map((proyect) => (
+      <CardProyect
+        title={proyect.title}
+        subtitle={proyect.subtitle}
+        description={proyect.description}
+        img={proyect.img}
+        github={proyect.github}
+        preview={proyect.preview}
+      />
+    ))}
+  </div>
+</section>
+<style>
+  .grid__porfolio {
+    display: grid;
+    gap: 1rem;
+  }
+  @media (min-width: 600px) {
+    .grid__porfolio {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+</style>

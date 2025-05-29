@@ -1,0 +1,226 @@
+---
+---
+
+<section class="hero">
+  <div class="profile__info container">
+    <figure class="profile__figure">
+      <img src="/assets/me.webp" 
+      alt="Foto de Cristian Sandoval" 
+      class="profile__img" 
+      loading="lazy"
+      decoding="async"
+      />
+    </figure>
+
+    <div class="profile__content">
+      <h1 class="hero__name">Cristian Sandoval</h1>
+      <p class="hero__description">Front-End Developer & Diseñador Gráfico</p>
+      <div class="hero__icons">
+        <a 
+        href="https://www.youtube.com/@CodCreativo" 
+        class="hero__icon" 
+        target="_blank"
+        aria-label="Perfil de YouTube de Cristian Sandoval"
+        >
+          <span class="line-md--youtube hero__icon"></span>
+        </a>
+        <a 
+        href="https://www.instagram.com/codigocreativo2025/" 
+        class="hero__icon" 
+        target="_blank"
+        aria-label="Perfil de Instagram de Cristian Sandoval"
+        >
+          <span class="line-md--instagram hero__icon"></span>
+        </a>
+        <a 
+        href="https://github.com/cristiansandoval22" 
+        class="hero__icon" 
+        target="_blank"
+        aria-label="Perfil de GitHub de Cristian Sandoval"
+        >
+          <span class="mdi--github hero__icon"></span>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <div class="profile__facts container">
+    <div class="profile__fact">
+      <span class="profile__fact-number">2+</span>
+      <span class="profile__fact-text">Años de experiencia</span>
+    </div>
+
+    <div class="profile__fact">
+      <span class="profile__fact-number">8+</span>
+      <span class="profile__fact-text">Proyectos completados</span>
+    </div>
+
+    <div class="profile__fact">
+      <span class="profile__fact-number">3+</span>
+      <span class="profile__fact-text">Clientes satisfechos</span>
+    </div>
+  </div>
+
+  <div class="profile__actions-buttons container">
+    <a href="/CV-CRISTIAN SANDOVAL.pdf" download="CV-CRISTIAN SANDOVAL.pdf" class="profile__action profile__action-cv">
+      Descargar CV
+      <span class="material-symbols--download"></span>
+    </a>
+
+    <a 
+    href="mailto:cristiansandovaltineo@gmail.com" 
+    class="profile__action" 
+    target="_blank"
+    aria-label="Enviar correo electrónico a Cristian Sandoval"
+    >
+      <span class="ic--outline-email"></span>
+    </a>
+
+    <a 
+    href="https://www.linkedin.com/in/cristian-junior-sandoval-tineo-25ba542bb/" 
+    class="profile__action" 
+    target="_blank"
+    aria-label="Perfil de LinkedIn de Cristian Sandoval"
+    >
+      <span class="mdi--linkedin"></span>
+    </a>
+  </div>
+
+  <style>
+    .hero {
+      padding-top: 7rem;
+      margin: auto;
+    }
+    .profile__figure {
+      width: 110px;
+      height: 110px;
+      margin: 0 auto;
+      border-radius: 50%;
+      overflow: hidden;
+      box-shadow: 0 0 0 4px var(--border-color);
+      background-color: var(--bg-primary);
+    }
+    .profile__img {
+      width: 100%;
+      border-radius: 50%;
+    }
+
+    .hero__name {
+      font-size: 1.5rem;
+      font-weight: 700;
+      text-align: center;
+      color: var(--text-primary);
+      margin-bottom: 0.2rem;
+    }
+    .hero__description {
+      font-size: 1rem;
+      font-weight: 400;
+      text-align: center;
+      color: var(--text-secondary);
+      margin-top: 0;
+      text-wrap: balance;
+      margin-top: 0.5rem;
+    }
+    .hero__icons {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+    .hero__icon {
+      width: 2rem;
+      height: 2rem;
+      color: var(--text-primary);
+    }
+  
+    .profile__facts {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 1rem;
+      margin-top: 2rem;
+    }
+    .profile__fact {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .profile__fact-number,
+    .profile__fact-text {
+      display: block;
+      text-align: center;
+    }
+    .profile__fact-number {
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--text-primary);
+    }
+    .profile__fact-text {
+      font-size: 0.8rem;
+      font-weight: 400;
+      color: var(--text-secondary);
+    }
+
+    .profile__actions-buttons {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 1rem;
+      margin-top: 2rem;
+    }
+    .profile__action {
+      display:flex;
+      justify-content: center;
+      align-items: center;
+      padding: 0.4rem 0.8rem;
+      background-color: var(--bg-primary);
+      color: var(--text-primary);
+      border-radius: 4px;
+      font-size: 0.8rem;
+      font-weight: 500;
+      transition: all 0.3s ease;
+    }
+    .profile__action-cv {
+      background-color: var(--color-secondary);
+      color: var(--color-n700);
+    }
+    .profile__action:hover {
+      background-color: var(--color-primary);
+    }
+    @media (min-width: 425px) {
+      .profile__info {
+        display: grid;
+        gap: 2rem;
+        grid-template-columns: 110px auto;
+        align-content: center;
+        justify-content: center;
+        justify-items: center;
+      }
+      .hero__name,
+      .hero__description {
+        text-align: left;
+      }
+      .hero__name {
+        margin-top: 0;
+      }
+      .hero__icons {
+        justify-content: flex-start;
+      }
+      .profile__fact-text {
+        font-size: 1rem;
+      }
+      
+       
+    }
+
+    @media (min-width: 768px) {
+      .profile__action {
+        padding: 1rem 2rem;
+        font-size: 1rem;
+        font-weight: 500;
+      }
+      
+    }
+  </style>
+</section>
