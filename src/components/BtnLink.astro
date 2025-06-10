@@ -1,0 +1,49 @@
+---
+interface Props {
+  slug: string;
+  name: string;
+}
+
+const { slug, name } = Astro.props;
+---
+
+<a href={`/project/${slug}`} class="card__link">
+  <span class="flowbite--link-outline card__icon"></span>
+  {name}
+</a>
+
+<style>
+  .card__link {
+    display: flex;
+    gap: 0.5rem;
+    justify-content: center;
+    align-items: center;
+    padding: 0.4rem 0.8rem;
+    background-color: var(--bg-body);
+    color: var(--text-primary);
+    border-radius: 4px;
+    font-size: 0.8rem;
+    transition: all 0.3s ease;
+    cursor: pointer;
+  }
+  .card__link:hover {
+    background-color: var(--color-primary);
+    color: var(--bg-body);
+  }
+  .card__icon {
+    width: 1rem;
+    height: 1rem;
+    color: var(--text-primary);
+  }
+
+  @media (min-width: 600px) {
+    .card__link {
+      padding: 0.4rem 1rem;
+    }
+    .card__icon {
+      width: 1.2rem;
+      height: 1.2rem;
+      color: var(--text-primary);
+    }
+  }
+</style>

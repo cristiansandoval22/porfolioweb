@@ -1,6 +1,27 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
 :root {
+  /* Tipografía */
+  --font-family: "Poppins", sans-serif;
+
+  /* Escala de tipografía */
+  --font-xs: 0.875rem; /* 14px */
+  --font-sm: 1rem; /* 16px */
+  --font-md: 1.125rem; /* 18px */
+  --font-lg: 1.25rem; /* 20px */
+  --font-xl: 1.5rem; /* 24px */
+  --font-2xl: 2rem; /* 32px */
+  --font-3xl: 2.5rem; /* 40px */
+  --font-4xl: 3rem; /* 48px */
+
+  /* Espaciado */
+  --space-xs: 0.5rem; /* 8px */
+  --space-sm: 1rem; /* 16px */
+  --space-md: 1.5rem; /* 24px */
+  --space-lg: 2rem; /* 32px */
+  --space-xl: 3rem; /* 48px */
+
+
   /* main*/
   --color-primary: #fbd144;
   --color-secondary: #ffe071;
@@ -43,11 +64,15 @@
 }
 
 /* Aplicar variables */
+html {
+  scroll-behavior: smooth;
+}
 body {
   background-color: var(--bg-body);
   color: var(--text-primary);
   font-family: "Poppins", sans-serif;
   transition: background-color 0.3s, color 0.3s;
+  font-size: var(--font-sm);
 }
 
 .container {
@@ -55,7 +80,66 @@ body {
   margin: 0 auto;
   padding: 0 1rem;
 }
+.p-top{
+  padding-top: 5rem;
+}
 
+/* Tipografía */
+h1 {
+  font-size: var(--font-2xl);
+  font-weight: bold;
+  margin-bottom: var(--space-sm);
+}
+h2 {
+  font-size: var(--font-xl);
+  font-weight: bold;
+  margin-bottom: var(--space-xs);
+}
+h3 {
+  font-size: var(--font-lg);
+  font-weight: bold;
+  margin-bottom: var(--space-xs);
+}
+p {
+  font-size: var(--font-md);
+  margin-bottom: var(--space-sm);
+}
+/* Responsive: tablet */
+@media (min-width: 641px) {
+  h1 {
+    font-size: var(--font-3xl);
+  }
+  h2 {
+    font-size: var(--font-2xl);
+  }
+  h3 {
+    font-size: var(--font-lg);
+    margin-top: var(--space-md);
+  }
+  p {
+    font-size: var(--font-md);
+  }
+  .button {
+    font-size: var(--font-md);
+  }
+}
+
+/* Responsive: desktop */
+@media (min-width: 1025px) {
+  h1 {
+    font-size: var(--font-4xl);
+  }
+  h2 {
+    font-size: var(--font-3xl);
+  }
+  h3 {
+    font-size: var(--font-lg);
+    margin-top: var(--space-lg);
+  }
+  p {
+    font-size: var(--font-md);
+  }
+}
 
 
 /* iconos */
@@ -271,4 +355,41 @@ body {
   mask-repeat: no-repeat;
   -webkit-mask-size: 100% 100%;
   mask-size: 100% 100%;
+}
+
+::view-transition-old(page),
+::view-transition-new(page) {
+  animation-duration: 2.5s;
+  animation-timing-function: cubic-bezier(.25, 1, .30, 1);
+  animation-fill-mode: both;
+}
+
+/* Para salida (cuando sales de la página actual) */
+::view-transition-old(page) {
+  animation-name: wipe-out-bottom-right;
+}
+
+/* Para entrada (cuando entras a la nueva página) */
+::view-transition-new(page) {
+  animation-name: wipe-in-bottom-right;
+}
+
+/* Animación personalizada de entrada */
+@keyframes wipe-in-bottom-right {
+  from {
+    clip-path: polygon(0 0, 0 0, 0 0, 0 50%);
+  }
+  to {
+    clip-path: polygon(-50% 0%, 200% 0, 0 200%, 0 -50%);
+  }
+}
+
+/* Opcional: puedes crear también una de salida */
+@keyframes wipe-out-bottom-right {
+  from {
+    clip-path: polygon(-50% 0%, 200% 0, 0 200%, 0 -50%);
+  }
+  to {
+    clip-path: polygon(0 0, 0 0, 0 0, 0 50%);
+  }
 }

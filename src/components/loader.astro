@@ -2,8 +2,6 @@
 // No necesitas props para esto
 ---
 
-
-
 <div class="loader-container" id="global-loader">
   <div class="loader"></div>
 </div>
@@ -19,44 +17,64 @@
     z-index: 9999;
   }
 
-/* HTML: <div class="loader"></div> */
-.loader {
-  width: 50px;
-  padding: 8px;
-  aspect-ratio: 1;
-  border-radius: 50%;
-  background: var(--color-primary);
-  --_m: 
-    conic-gradient(#0000 10%,#000),
-    linear-gradient(#000 0 0) content-box;
-  -webkit-mask: var(--_m);
-          mask: var(--_m);
-  -webkit-mask-composite: source-out;
-          mask-composite: subtract;
-  animation: l3 1s infinite linear;
-}
-@keyframes l3 {to{transform: rotate(1turn)}}
+  /* HTML: <div class="loader"></div> */
+  .loader {
+    width: 50px;
+    padding: 8px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    background: var(--color-primary);
+    --_m: conic-gradient(#0000 10%, #000), linear-gradient(#000 0 0) content-box;
+    -webkit-mask: var(--_m);
+    mask: var(--_m);
+    -webkit-mask-composite: source-out;
+    mask-composite: subtract;
+    animation: l3 1s infinite linear;
+  }
+  @keyframes l3 {
+    to {
+      transform: rotate(1turn);
+    }
+  }
 </style>
 
 <script>
-window.addEventListener("load", () => {
-  const loader = document.getElementById("global-loader") as HTMLElement;
-
-  // Usa sessionStorage en lugar de localStorage
-  const hasVisited = sessionStorage.getItem("hasVisited");
-
-  if (loader) {
-    const delay = hasVisited ? 0 : 2000; // solo espera si no ha entrado antes
-
-    setTimeout(() => {
-      loader.style.opacity = "0";
+  window.addEventListener("load", () => {
+    const loader = document.getElementById(
+      "global-loader"
+    ) as HTMLElement | null;
+    if (loader) {
       loader.style.transition = "opacity 0.5s ease";
-      setTimeout(() => loader.remove(), 500);
-    }, delay);
+      loader.style.opacity = "0";
+      setTimeout(() => {
+        loader.style.display = "none";
+      },2000);
+    }
+  });
 
-    // Marca esta sesión como visitada
-    sessionStorage.setItem("hasVisited", "true");
+  // Muestra el loader al hacer clic en un enlace interno
+  document.addEventListener("click", (e: MouseEvent) => {
+  const target = e.target as HTMLElement;
+  const anchor = target.closest("a") as HTMLAnchorElement | null;
+
+  if (
+    anchor &&
+    anchor.href &&
+    anchor.target !== "_blank" &&
+    anchor.origin === window.location.origin
+  ) {
+    e.preventDefault(); // Detiene la navegación automática
+
+    const loader = document.getElementById("global-loader") as HTMLElement | null;
+    if (loader) {
+      loader.style.display = "flex";
+      loader.style.opacity = "1";
+    }
+
+    // Espera 3 segundos, luego redirige manualmente
+    setTimeout(() => {
+      window.location.href = anchor.href;
+    }, 2000);
   }
-}); 
-
+});
 </script>

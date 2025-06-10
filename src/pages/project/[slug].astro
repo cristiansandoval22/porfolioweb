@@ -1,0 +1,94 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import BtnGitHub from "@/components/BtnGitHub.astro";
+import BtnPreview from "@/components/BtnPreview.astro";
+
+import { getCollection, render } from "astro:content";
+
+export async function getStaticPaths() {
+  const projects = await getCollection("projects");
+  return projects.map((project) => ({
+    params: { slug: project.slug },
+    props: { project },
+  }));
+}
+
+const { project } = Astro.props;
+
+const { slug,data } = project;
+const { title, subtitle, description, img, github, preview } = data;
+const { Content } = await render(project);
+---
+
+<Layout title={title} description={description}>
+  <section class="section container p-top">
+    <a href="/" class="back">{"<"} Volver</a>
+
+    <header class="single__header">
+      <p class="single__subtitle">{subtitle}</p>
+      <h1 class="single__title">{title}</h1>
+    </header>
+
+    <figure class="single__figure">
+      <img class="single__img" transition:name={`img-${slug}`} src={img} alt={title} />
+    </figure>
+
+    <div class="single__actions">
+      {github && <BtnGitHub link={github} name="GitHub" />}
+      {preview && <BtnPreview link={preview} name="Preview" />}
+    </div>
+
+    <div>
+      <Content />
+    </div>
+  </section>
+</Layout>
+
+<style>
+  .back {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.4rem 0.8rem;
+    margin-bottom: 1rem;
+    background-color: var(--color-secondary);
+    color: var(--color-n700);
+    border-radius: 4px;
+    font-size: 0.8rem;
+    transition: all 0.3s ease;
+  }
+  .back:hover {
+    background-color: var(--color-primary);
+  }
+
+  .single__actions {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    margin: 1rem 0;
+  }
+  .single__subtitle{
+    font-size: 1rem;
+    font-weight: 400;
+    color: var(--text-secondary);
+    margin-bottom: 0;
+  }
+  .single__title{
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-top: 0;
+  }
+  .single__figure{
+    overflow: hidden;
+    border-radius: 10px;
+    
+  }
+  
+  h3{
+    font-size: 1rem;
+    font-weight: 400;
+    color: var(--color-primary);
+    margin-bottom: 0;
+  }
+</style>
