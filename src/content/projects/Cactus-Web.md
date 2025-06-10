@@ -5,6 +5,17 @@ description: "Proyecto realizado HTML, CSS y JS"
 img: "/assets/project-5.webp"
 github: "https://github.com/cristiansandoval22/CACTUS__WEBSITE"
 preview: "https://cristiansandoval22.github.io/CACTUS__WEBSITE/"
+
+images: [
+  "/assets/project-5.webp",
+  "/assets/project-5.webp",
+  "/assets/project-5.webp",
+  "/assets/project-5.webp",
+  "/assets/project-5.webp",
+  "/assets/project-5.webp",
+  "/assets/project-5.webp",
+  "/assets/project-5.webp",
+]
 ---
 
 ### Descripción
@@ -33,9 +44,3 @@ Diseñar un sitio web funcional y moderno para presentar los servicios de la emp
 
 ### Capturas del Proyecto
 
-> *(Aquí puedes incluir un listado de imágenes adicionales si lo deseas con etiquetas Markdown o en HTML si tu blog lo permite)*
-
-### Enlaces
-
-- 🔍 [Vista previa del sitio](https://cristiansandoval22.github.io/CACTUS__WEBSITE/)
-- 💻 [Repositorio en GitHub](https://github.com/cristiansandoval22/CACTUS__WEBSITE)

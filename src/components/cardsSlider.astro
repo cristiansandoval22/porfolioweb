@@ -1,34 +1,22 @@
 ---
-
 import 'swiper/css';
 import 'swiper/css/effect-cards';
+
+export interface Props {
+  images: string[] | undefined;
+}
+const { images } = Astro.props;
+
 ---
 
 <div class="cards__slider">
   <div class="swiper mySwiper">
     <div class="swiper-wrapper">
-      <div class="swiper-slide">
-        <img src="/assets/me.webp" alt="">
-      </div>
-      <div class="swiper-slide">
-        <img src="/assets/client1.jpg" alt="">
-      </div>
-      <div class="swiper-slide">
-        <img src="/assets/client2.jpg" alt="">
-      </div>
-      <div class="swiper-slide">
-        <img src="/assets/client3.jpg" alt="">
-      </div>
-      <div class="swiper-slide">
-        <img src="/assets/client4.jpg" alt="">
-      </div>
-      <div class="swiper-slide">
-        <img src="/assets/client5.jpg" alt="">
-      </div>
-      <div class="swiper-slide">Slide 6</div>
-      <div class="swiper-slide">Slide 7</div>
-      <div class="swiper-slide">Slide 8</div>
-      <div class="swiper-slide">Slide 9</div>
+      {images?.map((image) => (
+        <div class="swiper-slide">
+          <img src={image} alt="" />
+        </div>
+      ))}
     </div>
   </div>
 </div>
@@ -49,8 +37,9 @@ import 'swiper/css/effect-cards';
     }
 
     .swiper {
-      width: 240px;
-      height: 320px;
+      width: 300px;
+      height: 200px;
+      
     }
 
     .swiper-slide {
@@ -61,6 +50,7 @@ import 'swiper/css/effect-cards';
       font-size: 22px;
       font-weight: bold;
       color: #fff;
+      border: 1px solid white;
     }
     .swiper-slide img {
       width: 100%;
@@ -68,7 +58,7 @@ import 'swiper/css/effect-cards';
       object-fit: cover;
       border-radius: 18px;
     }
-    .swiper-slide:nth-child(1n) {
+    /* .swiper-slide:nth-child(1n) {
       background-color: rgb(206, 17, 17);
     }
 
@@ -106,6 +96,19 @@ import 'swiper/css/effect-cards';
 
     .swiper-slide:nth-child(10n) {
       background-color: rgb(54, 94, 77);
+    } */
+
+    @media (min-width: 600px) {
+      .swiper {
+        width: 500px;
+        height: 300px;
+      }
+    }
+    @media (min-width: 1025px) {
+      .swiper {
+        width: 700px;
+        height: 400px;
+      }
     }
   </style>
 
@@ -118,5 +121,7 @@ import 'swiper/css/effect-cards';
     modules: [EffectCards],
     effect: "cards",
     grabCursor: true,
+    loop: true,
+   
   });
 </script>

@@ -2,6 +2,7 @@
 import Layout from "@/layouts/Layout.astro";
 import BtnGitHub from "@/components/BtnGitHub.astro";
 import BtnPreview from "@/components/BtnPreview.astro";
+import CardsSlider from "@/components/cardsSlider.astro";
 
 import { getCollection, render } from "astro:content";
 
@@ -16,8 +17,12 @@ export async function getStaticPaths() {
 const { project } = Astro.props;
 
 const { slug,data } = project;
-const { title, subtitle, description, img, github, preview } = data;
+const { title, subtitle, description, img, github, preview, images } = data;
 const { Content } = await render(project);
+
+
+
+
 ---
 
 <Layout title={title} description={description}>
@@ -30,7 +35,7 @@ const { Content } = await render(project);
     </header>
 
     <figure class="single__figure">
-      <img class="single__img" transition:name={`img-${slug}`} src={img} alt={title} />
+      <img class="single__img" src={img} alt={title} />
     </figure>
 
     <div class="single__actions">
@@ -40,6 +45,10 @@ const { Content } = await render(project);
 
     <div>
       <Content />
+    </div>
+
+    <div class="single__images container">
+      <CardsSlider images={images} />
     </div>
   </section>
 </Layout>
@@ -84,6 +93,15 @@ const { Content } = await render(project);
     border-radius: 10px;
     
   }
+  .single__images{
+    display: flex;
+    margin: 2rem auto;
+  }
+  .single__images img{
+    border-radius: 10px;
+    width: 100%;
+    height: auto;
+  }
   
   h3{
     font-size: 1rem;
@@ -91,4 +109,5 @@ const { Content } = await render(project);
     color: var(--color-primary);
     margin-bottom: 0;
   }
+ 
 </style>

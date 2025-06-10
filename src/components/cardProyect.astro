@@ -16,7 +16,6 @@ const { title, subtitle, description, img, github, slug } = Astro.props;
 <article class="card">
   <figure class="card__figure">
     <img
-      transition:name={`img-${slug}`}
       src={img}
       alt={`proyecto de ${title}`}
       class="card__img"

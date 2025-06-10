@@ -8,6 +8,7 @@ const projects = defineCollection({
         img: z.string(),
         github: z.string().optional(),
         preview: z.string().optional(),
+        images: z.array(z.string()).optional(),
     }),
 });
 
