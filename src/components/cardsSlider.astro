@@ -1,8 +1,5 @@
 ---
-import "swiper/css";
-import "swiper/css/effect-cards";
-import "swiper/css/navigation";
-import "swiper/css/pagination";
+
 
 export interface Props {
   images: string[] | undefined;
@@ -36,6 +33,7 @@ const { images } = Astro.props;
     max-width: 800px;
     margin: auto;
     aspect-ratio: 16 / 9;
+    user-select: none;
   }
 
   .swiper {
@@ -61,6 +59,7 @@ const { images } = Astro.props;
   .swiper-button-prev::after {
     font-size: 24px;
   }
+  
 </style>
 
 <script>

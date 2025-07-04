@@ -103,6 +103,7 @@ h3 {
 p {
   font-size: var(--font-md);
   margin-bottom: var(--space-sm);
+  text-wrap: wrap;
 }
 /* Responsive: tablet */
 @media (min-width: 641px) {
@@ -355,6 +356,9 @@ p {
   mask-repeat: no-repeat;
   -webkit-mask-size: 100% 100%;
   mask-size: 100% 100%;
+}
+.swiper-pagination-progressbar-fill {
+  background-color: var(--color-primary) !important;
 }
 
 ::view-transition-old(page),

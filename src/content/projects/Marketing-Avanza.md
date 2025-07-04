@@ -1,10 +1,68 @@
 ---
 title: "Marketing - Avanza"
 subtitle: "WebSite"
-description: "Proyecto realizado con la herramienta no-code Go High Level."
+description: "Proyecto realizado con HTML, CSS y JavaScript puro."
 img: "/assets/project-7.webp"
-github: "https://github.com/cristiansandoval22/CACTUS__WEBSITE"
-preview: "https://luesem.bysness.pe/luesem-3305"
+github: "https://github.com/cristiansandoval22/MarketingAvanza"
+preview: "https://enchanting-otter-66b1c8.netlify.app/"
+images: [
+  "/assets/project-7.webp",
+  "/assets/project-7.webp",
+  "/assets/project-7.webp",
+  "/assets/project-7.webp",
+  "/assets/project-7.webp",
+  "/assets/project-7.webp",
+  "/assets/project-7.webp",
+  "/assets/project-7.webp",
+]
+---
+### Descripción
+
+Este proyecto es una landing page desarrollada con HTML, CSS y JavaScript puro, creada para un negocio ficticio de marketing digital, bajo el lema:
+
+> "Impulsa tu negocio con soluciones de marketing digital.
+> Transformamos tu presencia online para alcanzar nuevos niveles de éxito."
+
+El sitio fue concebido como un ejercicio práctico para reforzar mis habilidades en maquetación web, diseño responsivo y experiencia de usuario (UX), sin depender de frameworks externos.
+
+
+
 ---
 
-Este proyecto fue realizado con la herramienta no-code Go High Level para una empresa enfocada en la innovación continua. La página destaca soluciones tecnológicas integradas con seguridad y confort, optimizada para conversión y experiencia del usuario.
+### Objetivo del Proyecto
+
+- ✔️ Practicar el desarrollo frontend utilizando únicamente HTML, CSS y JavaScript puro.
+
+- ✔️ Diseñar una landing page profesional para un negocio ficticio de marketing online.
+
+- ✔️ Aplicar principios de diseño moderno, responsivo y enfocado en la conversión.
+
+- ✔️ Mejorar habilidades en estructura semántica, Flexbox/Grid y organización visual.
+
+- ✔️ Simular un proyecto real para portafolio, con enfoque en UX/UI.
+
+---
+
+### Características
+
+- ✔️ Desarrollo 100% en HTML, CSS y JavaScript puro.
+
+- ✔️ Diseño responsivo adaptable a móviles, tablets y escritorio.
+
+- ✔️ Secciones claras para presentar los servicios y beneficios del negocio.
+
+- ✔️ Enfoque en la experiencia de usuario con una navegación fluida.
+
+- ✔️ Tipografía y paleta de colores modernas y atractivas.
+
+- ✔️ Formulario de contacto no funcional, incluido para propósitos visuales.
+
+---
+
+### Tecnologías Utilizadas
+
+- ✔️ HTML (estructura semántica)
+
+- ✔️ CSS (estilos personalizados con Flexbox/Grid)
+
+- ✔️ JavaScript (interacciones básicas)
