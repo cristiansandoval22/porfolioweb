@@ -2,18 +2,15 @@
 title: "Innova Company Selva"
 subtitle: "WebSite"
 description: "Proyecto realizado con la herramienta no-code Go High Level."
-img: "/assets/project-2.webp"
+img: "/project-2/project-2.webp"
 github: ""
 preview: "https://companyselva.com/"
 images: [
-  "/assets/project-2.webp",
-  "/assets/project-2.webp",
-  "/assets/project-2.webp",
-  "/assets/project-2.webp",
-  "/assets/project-2.webp",
-  "/assets/project-2.webp",
-  "/assets/project-2.webp",
-  "/assets/project-2.webp",
+  "/project-2/Screenshot-1.jpg",
+  "/project-2/Screenshot-2.jpg",
+  "/project-2/Screenshot-3.jpg",
+  "/project-2/Screenshot-4.jpg",
+  "/project-2/Screenshot-5.jpg",
 ]
 ---
 

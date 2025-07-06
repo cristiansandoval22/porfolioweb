@@ -8,8 +8,8 @@ const { link, name } = Astro.props;
 ---
 
 
-
-<a href={link} target="_blank"  class="preview__link">
+<!-- Boton Preview -->
+<a href={link} target="_blank" aria-label="Enlace al proyecto" rel="noopener noreferrer" class="preview__link">
     <span class="flowbite--link-outline preview__icon" />
     {name}
 </a>

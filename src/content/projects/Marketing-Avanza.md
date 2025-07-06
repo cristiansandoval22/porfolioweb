@@ -2,18 +2,15 @@
 title: "Marketing - Avanza"
 subtitle: "WebSite"
 description: "Proyecto realizado con HTML, CSS y JavaScript puro."
-img: "/assets/project-7.webp"
+img: "/project-7/project-7.webp"
 github: "https://github.com/cristiansandoval22/MarketingAvanza"
 preview: "https://enchanting-otter-66b1c8.netlify.app/"
 images: [
-  "/assets/project-7.webp",
-  "/assets/project-7.webp",
-  "/assets/project-7.webp",
-  "/assets/project-7.webp",
-  "/assets/project-7.webp",
-  "/assets/project-7.webp",
-  "/assets/project-7.webp",
-  "/assets/project-7.webp",
+  "/project-7/Screenshot-1.jpg",
+  "/project-7/Screenshot-2.jpg",
+  "/project-7/Screenshot-3.jpg",
+  "/project-7/Screenshot-4.jpg",
+  "/project-7/Screenshot-5.jpg",
 ]
 ---
 ### Descripción

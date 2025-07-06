@@ -2,18 +2,15 @@
 title: "IPRESSalud - Landing Page"
 subtitle: "WebSite"
 description: "Proyecto realizado con la herramienta no-code Go High Level."
-img: "/assets/project-3.webp"
+img: "/project-3/project-3.webp"
 github: ""
-preview: "https://ipressalud.com/" 
+preview: "https://app.bysness.pe/v2/preview/jnrfK2n4CS4uAmRZ4WH7?notrack=true" 
 images: [
-  "/assets/project-3.webp",
-  "/assets/project-3.webp",
-  "/assets/project-3.webp",
-  "/assets/project-3.webp",
-  "/assets/project-3.webp",
-  "/assets/project-3.webp",
-  "/assets/project-3.webp",
-  "/assets/project-3.webp",
+  "/project-3/Screenshot-1.jpg",
+  "/project-3/Screenshot-2.jpg",
+  "/project-3/Screenshot-3.jpg",
+  "/project-3/Screenshot-4.jpg",
+  "/project-3/Screenshot-5.jpg",
 ]
 ---
 

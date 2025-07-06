@@ -2,18 +2,18 @@
 title: "Burger - Landing Page"
 subtitle: "WebSite"
 description: "Proyecto realizado con HTML, CSS y JavaScript puro y Bootstrap."
-img: "/assets/project-4.webp"
+img: "/project-4/project-4.webp"
 github: "https://github.com/cristiansandoval22/RESTAURANT_FOOD"
 preview: "https://charming-rabanadas-671cbe.netlify.app/"
 images: [
-  "/assets/project-4.webp",
-  "/assets/project-4.webp",
-  "/assets/project-4.webp",
-  "/assets/project-4.webp",
-  "/assets/project-4.webp",
-  "/assets/project-4.webp",
-  "/assets/project-4.webp",
-  "/assets/project-4.webp",
+  "/project-4/Screenshot-1.jpg",
+  "/project-4/Screenshot-2.jpg",
+  "/project-4/Screenshot-3.jpg",
+  "/project-4/Screenshot-4.jpg",
+  "/project-4/Screenshot-5.jpg",
+  "/project-4/Screenshot-6.jpg",
+  "/project-4/Screenshot-7.jpg",
+  "/project-4/Screenshot-8.jpg",
 ]
 ---
 
@@ -21,7 +21,7 @@ images: [
 
 Este proyecto es una landing page desarrollada con HTML, CSS y JavaScript puro y Bootstrap, creada para un negocio ficticio de hamburguesas.
 
-El sitio fue concebido como un ejercicio práctico para reforzar mis habilidades en maquetación web, diseño responsivo y experiencia de usuario, sin el uso de frameworks externos.
+El sitio fue concebido como un ejercicio práctico para reforzar mis habilidades en maquetación web, diseño responsivo y experiencia de usuario, con el uso de frameworks externos.
 
 ---
 

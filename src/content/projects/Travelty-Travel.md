@@ -2,18 +2,15 @@
 title: "Travelty - Travel"
 subtitle: "WebSite"
 description: "Proyecto realizado con HTML, CSS y JavaScript puro."
-img: "/assets/project-6.webp"
+img: "/project-6/project-6.webp"
 github: "https://github.com/cristiansandoval22/WEBSITE__TRAVELTY"
 preview: "https://heartfelt-malasada-bc867c.netlify.app/"
 images: [
-  "/assets/project-6.webp",
-  "/assets/project-6.webp",
-  "/assets/project-6.webp",
-  "/assets/project-6.webp",
-  "/assets/project-6.webp",
-  "/assets/project-6.webp",
-  "/assets/project-6.webp",
-  "/assets/project-6.webp",
+  "/project-6/Screenshot-1.jpg",
+  "/project-6/Screenshot-2.jpg",
+  "/project-6/Screenshot-3.jpg",
+  "/project-6/Screenshot-4.jpg",
+  "/project-6/Screenshot-5.jpg",
 ]
 ---
 
