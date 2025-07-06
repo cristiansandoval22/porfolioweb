@@ -7,7 +7,7 @@ interface Props {
 const { slug, name } = Astro.props;
 ---
 
-<a href={`/project/${slug}`} class="card__link">
+<a href={`/project/${slug}`} class="card__link" aria-label="Enlace al proyecto" rel="noopener noreferrer">
   <span class="flowbite--link-outline card__icon"></span>
   {name}
 </a>

@@ -2,19 +2,16 @@
 title: "Cactus - Web"
 subtitle: "WebSite"
 description: "Proyecto realizado con HTML, CSS y JavaScript puro."
-img: "/assets/project-5.webp"
+img: "/project-5/project-5.webp"
 github: "https://github.com/cristiansandoval22/CACTUS__WEBSITE"
 preview: "https://cactuswebsite.netlify.app/"
 
 images: [
-  "/assets/project-5.webp",
-  "/assets/project-5.webp",
-  "/assets/project-5.webp",
-  "/assets/project-5.webp",
-  "/assets/project-5.webp",
-  "/assets/project-5.webp",
-  "/assets/project-5.webp",
-  "/assets/project-5.webp",
+  "/project-5/Screenshot-1.jpg",
+  "/project-5/Screenshot-2.jpg",
+  "/project-5/Screenshot-3.jpg",
+  "/project-5/Screenshot-4.jpg",
+  "/project-5/Screenshot-5.jpg",
 ]
 ---
 

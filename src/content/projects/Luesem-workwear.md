@@ -2,18 +2,15 @@
 title: "Luesem - workwear"
 subtitle: "WebSite"
 description: "Proyecto realizado con la herramienta no-code Go High Level."
-img: "/assets/project-1.webp"
+img: "/project-1/project-1.webp"
 github: ""
 preview: "https://luesem.bysness.pe/luesem-3305"
 images: [
-  "/assets/project-1.webp",
-  "/assets/project-1.webp",
-  "/assets/project-1.webp",
-  "/assets/project-1.webp",
-  "/assets/project-1.webp",
-  "/assets/project-1.webp",
-  "/assets/project-1.webp",
-  "/assets/project-1.webp",
+  "/project-1/Screenshot-1.jpg",
+  "/project-1/Screenshot-2.jpg",
+  "/project-1/Screenshot-3.jpg",
+  "/project-1/Screenshot-4.jpg",
+  "/project-1/Screenshot-5.jpg",
 ]
 ---
 
