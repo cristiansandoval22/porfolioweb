@@ -1,5 +1,5 @@
 ---
-import { ClientRouter } from 'astro:transitions';
+import { ClientRouter } from "astro:transitions";
 import "../styles/normalize.css";
 import "../styles/global.css";
 import "swiper/css";
@@ -30,13 +30,58 @@ const { title, description, keywords } = Astro.props;
     <title>{title}</title>
     <ClientRouter />
   </head>
-  <body  >
+  <body>
     <Loader />
-    <Header />
-    <main >
-      <slot />
-    </main>
-    <Footer />
-    
+    <div class="wrapper">
+      <!-- Magenta Orb Grid Background -->
+      <div class="wrapper__two"></div>
+
+      <!-- Your Content/Components -->
+      <div
+        class=" wrapper__three "
+      >
+        <Header />
+        <main>
+          <slot />
+        </main>
+        <Footer />
+      </div>
+    </div>
   </body>
 </html>
+
+<style>
+  .wrapper {
+    min-height: 100vh;
+    width: 100%;
+    background: #020617;
+    position: relative;
+  }
+
+  .wrapper__two {
+    position: absolute;
+    inset: 0;
+    background: #020617;
+    background-image: linear-gradient(
+        to right,
+        rgba(71, 85, 105, 0.15) 1px,
+        transparent 1px
+      ),
+      linear-gradient(to bottom, rgba(71, 85, 105, 0.15) 1px, transparent 1px),
+      radial-gradient(
+        circle at 50% 60%,
+        rgba(236, 72, 153, 0.15) 0%,
+        rgba(168, 85, 247, 0.05) 40%,
+        transparent 70%
+      );
+    background-size:
+      40px 40px,
+      40px 40px,
+      100% 100%;
+  }
+  .wrapper__three{
+    position: relative;
+    z-index: 10;
+    min-height: 100vh;
+}
+</style>
